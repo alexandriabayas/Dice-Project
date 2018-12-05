@@ -3,12 +3,12 @@ public class Die{
 	private int sides;
 	private int value;
 
-	public Dice(){
+	public Die(){
 		sides = 6;
 		value = (int)(Math.random()*6)+1;
 	}
 
-	public Dice(int sides){
+	public Die(int sides){
 		this.sides = sides;
 		value = (int)(Math.random()*sides)+1;
 	}
