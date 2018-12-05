@@ -1,8 +1,8 @@
 public class DiceRunner{
 	public static void main (String[]args){
 
-		Dice die1 = new Dice();
-		Dice die2 = new Dice();
+		Die die1 = new Die();
+		Die die2 = new Die();
 
 		int rolls = 0;
 
@@ -22,9 +22,14 @@ public class DiceRunner{
 
 		int i;
 		do{
-			i = hold.addDie(new Dice());
-			hold.toString();
+			i = hold.addDie(new Die());
+			System.out.println(hold.toString());
 		}while(i != -1);
+
+		System.out.println();
+
+		hold.shake();
+		System.out.println(hold.toString());
 
 
 	}
