@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 public class DiceHolder {
 
-	private ArrayList<Dice> container;
+	private ArrayList<Die> container;
 
 	public DiceHolder() {
-		this.container = new ArrayList<Dice>();
+		this.container = new ArrayList<Die>();
 	}
 
 	public int addDie(Die die) {
 		if (container.size() < 6) {
-			container.add(Die());
+			container.add(die);
 			return 1;
 		}
 		else
@@ -25,9 +25,8 @@ public class DiceHolder {
 
 	public String toString() {
 		String x = "";
-		for (int i = 0; i < container.size(); i++) {
-			x += "Dice " + i + ": " + container.get(i).toString() + "\n";
-		}
+		for (int i = 0; i < container.size(); i++)
+			x += "Dice " + (i + 1) + ": " + container.get(i).toString() + "\n";
 		return x;
 	}
 

@@ -20,11 +20,11 @@ public class DiceRunner{
 
 		DiceHolder hold = new DiceHolder();
 
-		int i;
-		do{
-			i = hold.addDie(new Die());
+		int i = 1;
+		while(i != -1){
 			System.out.println(hold.toString());
-		}while(i != -1);
+			i = hold.addDie(new Die((int)(Math.random()*20)+1));
+		}
 
 		System.out.println();
 
